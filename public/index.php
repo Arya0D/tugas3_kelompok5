@@ -6,3 +6,4 @@ error_reporting(E_ALL);
 
 // public/index.php
 require_once '../routes.php';
+
