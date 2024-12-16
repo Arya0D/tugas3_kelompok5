@@ -43,36 +43,36 @@ if ($url == '/user/index') { //users
 } elseif (preg_match('/\/activities\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $activities_controller->delete($id);
-} elseif($url == '/accomondation/index'){ //accomondation
-    $accomondation_controller->index();
-}  elseif ($url == '/accomondation/create' && $requestMethod == 'GET') {
-    $accomondation_controller->create();
-} elseif ($url == '/accomondation/store' && $requestMethod == 'POST') {
-    $accomondation_controller->store();
-} elseif (preg_match('/\/accomondation\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif($url == '/accommodations/index'){ //accommodations
+    $accomodations_controller->index();
+}  elseif ($url == '/accommodations/create' && $requestMethod == 'GET') {
+    $accomodations_controller->create();
+} elseif ($url == '/accommodations/store' && $requestMethod == 'POST') {
+    $accomodations_controller->store();
+} elseif (preg_match('/\/accommodations\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accomondation_controller->edit($id);
-} elseif (preg_match('/\/accomondation\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
+    $accomodations_controller->edit($id);
+} elseif (preg_match('/\/accommodations\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $id = $matches[1];
-    $accomondation_controller->update($id, $_POST);
-} elseif (preg_match('/\/accomondation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+    $accomodations_controller->update($id, $_POST);
+} elseif (preg_match('/\/accommodations\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accomondation_controller->delete($id);
+    $accomodations_controller->delete($id);
 } elseif($url == '/reservation/index'){ //reservation
-    $accomondation_controller->index();
+    $resrvation_controller->index();
 }  elseif ($url == '/reservation/create' && $requestMethod == 'GET') {
-    $accomondation_controller->create();
+    $resrvation_controller->create();
 } elseif ($url == '/reservation/store' && $requestMethod == 'POST') {
-    $accomondation_controller->store();
+    $resrvation_controller->store();
 } elseif (preg_match('/\/reservation\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accomondation_controller->edit($id);
+    $resrvation_controller->edit($id);
 } elseif (preg_match('/\/reservation\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $id = $matches[1];
-    $accomondation_controller->update($id, $_POST);
-} elseif (preg_match('/\/accomondation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+    $resrvation_controller->update($id, $_POST);
+} elseif (preg_match('/\/resrvation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accomondation_controller->delete($id);
+    $resrvation_controller->delete($id);
 }else {
     http_response_code(404);
     echo "404 Not Found";
