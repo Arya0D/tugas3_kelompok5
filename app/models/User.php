@@ -21,19 +21,21 @@ class User {
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function add($name, $email) {
-        $query = $this->db->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
-        $query->bindParam(':name', $name);
+    public function add($nama, $email, $nomor_telepon) {
+        $query = $this->db->prepare("INSERT INTO users (nama, email, nomor_telepon) VALUES (:nama, :email, :nomor_telepon)");
+        $query->bindParam(':nama', $nama);
         $query->bindParam(':email', $email);
+        $query->bindParam(':nomor_telepon', $nomor_telepon);
         return $query->execute();
     }
 
     // Update user data by ID
     public function update($id, $data) {
-        $query = "UPDATE users SET name = :name, email = :email WHERE id = :id";
+        $query = "UPDATE users SET nama = :nama, email = :email, nomor_telepon = :nomor_telepon WHERE id = :id";
         $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':name', $data['name']);
+        $stmt->bindParam(':nama', $data['nama']);
         $stmt->bindParam(':email', $data['email']);
+        $stmt->bindParam(':nomor_telepon', $data['nomor_telepon']);
         $stmt->bindParam(':id', $id);
         return $stmt->execute();
     }
