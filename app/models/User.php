@@ -15,7 +15,7 @@ class User {
     }
 
     public function find($id) {
-        $query = $this->db->prepare("SELECT * FROM users WHERE id = :id");
+        $query = $this->db->prepare("SELECT * FROM users WHERE id_user = :id");
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
@@ -31,7 +31,7 @@ class User {
 
     // Update user data by ID
     public function update($id, $data) {
-        $query = "UPDATE users SET nama = :nama, email = :email, nomor_telepon = :nomor_telepon WHERE id = :id";
+        $query = "UPDATE users SET nama = :nama, email = :email, nomor_telepon = :nomor_telepon WHERE id_user = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':nama', $data['nama']);
         $stmt->bindParam(':email', $data['email']);
@@ -42,7 +42,7 @@ class User {
 
     // Delete user by ID
     public function delete($id) {
-        $query = "DELETE FROM users WHERE id = :id";
+        $query = "DELETE FROM users WHERE id_user = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':id', $id);
         return $stmt->execute();
