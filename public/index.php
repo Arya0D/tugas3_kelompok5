@@ -12,8 +12,13 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
 <link rel="stylesheet" href="/public/style.css">
 </head>
+<style>
+    .dt-length{
+        display: none;
+    }
+</style>
 <body  class=" bg-slate-100">
-    <div class="h-full flex">
+    <div class="h-full min-h-screen flex">
 <div class="w-[120px]  bg-slate-200  p-1 pt-8">
     <div  class="sticky top-[32px]">
     <div class="w-full bg-black text-white p-2 text-center rounded-3xl">Kelompok 5</div>
@@ -34,7 +39,7 @@
 
 </div>
 
-    <div class="flex-1 h-full p-2">
+    <div class="flex-1 h-full">
 <?php
 
 ini_set('display_errors', 1);

@@ -2,7 +2,7 @@
         <h2 class="text-black uppercase text-center text-6xl font-bold p-4">Tabel Aktivitas</h2>
         <table id="table">
         <a href="/activities/create" class="bg-sky-700 p-3 relative top-[30px] rounded-md text-white font-bold z-10"><button class="btn btn-add">Tambah</button></a>
-            <thead>
+            <thead class="bg-blue-300">
                 <tr>
                     <th>Aktivitas</th>
                     <th>Deskripsi</th>

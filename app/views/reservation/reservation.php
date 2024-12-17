@@ -2,7 +2,7 @@
         <h2 class="text-black uppercase text-center text-6xl font-bold p-4">Table Users</h2>
         <table id="table" class="display">
         <a href="/reservation/create" class="bg-sky-700 p-3 relative top-[30px] rounded-md text-white font-bold z-10"><button class="btn btn-add">Tambah</button></a>
-    <thead>
+    <thead class="bg-blue-300">
         <tr>
             <th>Pelanggan</th>
             <th>Penginapan</th>
