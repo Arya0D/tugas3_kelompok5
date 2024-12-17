@@ -12,13 +12,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color:rgb(234, 239, 245);
+            background-color:rgb(255, 255, 255);
             color: #000;
         }
         .form-container {
             background-color: #4A90E2;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 400px;
@@ -47,7 +47,7 @@
             outline: none;
         }
         input:focus {
-            border-color:rgb(25, 119, 234);
+            border-color: #007BFF;
         }
         .button-container {
             display: flex;
@@ -67,7 +67,7 @@
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .btn-reset {
-            background-color:rgb(11, 113, 203);
+            background-color: #6c757d;
         }
         a {
             display: inline-block;
@@ -82,23 +82,20 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Edit Pengguna</h2>
-        <form action="/user/update/<?php echo $user['id_user']; ?>" method="POST">
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" value="<?php echo htmlspecialchars($user['nama']); ?>" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
-
-            <label for="nomor_telepon">Nomor Telepon</label>
-            <input type="text" id="nomor_telepon" name="nomor_telepon" value="<?php echo htmlspecialchars($user['nomor_telepon']); ?>" required>
-
-            <div class="button-container">
-                <button type="submit">Update</button>
-            </div>
-        </form>
-        <a href="/user/index">Kembali ke Tabel</a>
-    </div>
+    <h2>Edit User</h2>
+    <form action="/user/update/<?php echo $user['id_user']; ?>" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="nama" name="nama" value="<?php echo $user['nama']; ?>" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" required>
+        <br>
+        <br>
+        <label for="nomor_telepon">Nomor Telepon:</label>
+        <input type="nomor_telepon" id="nomor_telepon" name="nomor_telepon" value="<?php echo $user['nomor_telepon']; ?>" required>
+        <br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/user/index">Back to List</a>
 </body>
 </html>
