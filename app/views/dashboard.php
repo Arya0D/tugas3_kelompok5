@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center h-full bg-[url('/images/background.png')] bg-cover">
+<div class="flex flex-col justify-center items-center h-screen bg-[url('/images/background.png')] bg-cover">
     <div class="bg-slate-400/80 text-center w-1/2 text-xl font-bold p-6 rounded-xl">
         <h1 class="text-3xl">Selamat Datang</h1>
         <h3>Admin</h3>
@@ -16,7 +16,7 @@
             <img src="/images/activities.png" alt="" class="w-[150px] h-[150px]">
             <h1 class="text-center font-bold text-white text-xl">Activities</h1>
         </a>
-        <a href="/accommodation/" class="w-8 h-8 p-4 w-full h-full">
+        <a href="/accommodations/index" class="w-8 h-8 p-4 w-full h-full">
             <img src="/images/accommodations.png" alt="" class="w-[150px] h-[150px]">
             <h1 class="text-center font-bold text-white text-xl">Accommodations</h1>
         </a>

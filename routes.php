@@ -5,15 +5,19 @@ require_once 'app/controllers/UserController.php';
 require_once 'app/controllers/AccommodationsController.php';
 // require_once 'app/controllers/ActivitiesController.php';
 require_once 'app/controllers/ReservationController.php';
+require_once 'app/controllers/Controllers.php';
+
 
 $user_controller = new UserController();
 $accommodations_controller = new AccommodationsController();
 // $activities_controller = new ActivitiesController();
 $reservation_controller = new ReservationController();
+$controller = new Controller();
+
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/user/index' || $url == '/') { //users
+if ($url == '/user/index') { //users
     $user_controller->index();
 } elseif ($url == '/user/create' && $requestMethod == 'GET') {
     $user_controller->create();
@@ -28,7 +32,7 @@ if ($url == '/user/index' || $url == '/') { //users
 } elseif (preg_match('/\/user\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $user_controller->delete($id);
-} elseif($url == '/activites/index'){ //activites
+// } elseif($url == '/activites/index'){ //activites
     $activities_controller->index();
 }  elseif ($url == '/activities/create' && $requestMethod == 'GET') {
     $activities_controller->create();
@@ -59,27 +63,26 @@ if ($url == '/user/index' || $url == '/') { //users
     $id = $matches[1];
     $accommodations_controller->delete($id);
 } elseif($url == '/reservation/index'){ //reservation
-    $accommodations_controller->index();
     $reservation_controller->index();
 }  elseif ($url == '/reservation/create' && $requestMethod == 'GET') {
-    $accommodations_controller->create();
     $reservation_controller->create();
 } elseif ($url == '/reservation/store' && $requestMethod == 'POST') {
-    $accommodations_controller->store();
     $reservation_controller->store();
 } elseif (preg_match('/\/reservation\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $resrvation_controller->edit($id);
 } elseif (preg_match('/\/reservation\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $id = $matches[1];
-    $accommodations_controller->update($id, $_POST);
+    $reservation_controller->update($id, $_POST);
 } elseif (preg_match('/\/accommondations\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $reseervation_controller->update($id, $_POST);
 } elseif (preg_match('/\/resrvation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accommodations_controller->delete($id);
+    $reservation_controller->delete($id);
     $reseervation_controller->delete($id);
-}else {
+}elseif($url == '/'){ //accommodations
+    $controller->index();
+} else {
     http_response_code(404);
     echo "404 Not Found";
 }
