@@ -69,17 +69,16 @@ if ($url == '/user/index' || $url == '/') { //users
     $reservation_controller->store();
 } elseif (preg_match('/\/reservation\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $accommodations_controller->edit($id);
-    $reservation_controller->edit($id);
+    $resrvation_controller->edit($id);
 } elseif (preg_match('/\/reservation\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $id = $matches[1];
     $accommodations_controller->update($id, $_POST);
 } elseif (preg_match('/\/accommondations\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
-    $reservation_controller->update($id, $_POST);
+    $reseervation_controller->update($id, $_POST);
 } elseif (preg_match('/\/resrvation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $accommodations_controller->delete($id);
-    $reservation_controller->delete($id);
+    $reseervation_controller->delete($id);
 }else {
     http_response_code(404);
     echo "404 Not Found";
