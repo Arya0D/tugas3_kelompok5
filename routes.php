@@ -2,18 +2,18 @@
 // routes.php
 
 require_once 'app/controllers/UserController.php';
-require_once 'app/controllers/AccomondationController.php';
-require_once 'app/controllers/ActivitiesController.php';
-require_once 'app/controllers/ReservationController.php';
+// require_once 'app/controllers/AccomondationController.php';
+// require_once 'app/controllers/ActivitiesController.php';
+// require_once 'app/controllers/ReservationController.php';
 
 $user_controller = new UserController();
-$accomondation_controller = new AccomondationController();
-$activities_controller = new ActivitiesController();
+// $accomondation_controller = new AccomondationController();
+// $activities_controller = new ActivitiesController();
 //$reservation_controller = new ReservationController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/user/index') { //users
+if ($url == '/user/index' || $url == '/') { //users
     $user_controller->index();
 } elseif ($url == '/user/create' && $requestMethod == 'GET') {
     $user_controller->create();

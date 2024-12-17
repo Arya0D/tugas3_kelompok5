@@ -20,9 +20,10 @@ class UserController {
     }
 
     public function store() {
-        $name = $_POST['name'];
+        $nama = $_POST['nama'];
         $email = $_POST['email'];
-        $this->userModel->add($name, $email);
+        $nomor_telepon = $_POST['nomor_telepon'];
+        $this->userModel->add($nama, $email, $nomor_telepon);
         header('Location: /user/index');
     }
     // Show the edit form with the user data
