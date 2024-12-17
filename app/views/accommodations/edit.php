@@ -41,7 +41,7 @@
             color: black;
         }
         input, select {
-            padding: 10px;
+            padding: 5px;
             margin-bottom: 5px;
             border: 2px solid #ccc;
             border-radius: 5px;
@@ -101,7 +101,9 @@
 
             <label for="id_aktivitas">Aktivitas</label>
             <select name="aktivitas" id="">
+                
                 <option value="<?=$accommodations['id_aktivitas']; ?>"><?php echo htmlspecialchars($accommodations['nama_aktivitas']); ?></option>
+                <option value="">Pilih Aktivitas</option> 
                 <?php foreach ($activities as $x): ?>
                     <option value="<?= $x['id_aktivitas']; ?>"><?php echo htmlspecialchars($x['nama_aktivitas']); ?></option>
                 <?php endforeach; ?>
