@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-800">
 <?php
 
 ini_set('display_errors', 1);
