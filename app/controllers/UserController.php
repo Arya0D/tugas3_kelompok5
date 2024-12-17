@@ -49,6 +49,7 @@ class UserController {
             header("Location: /user/index"); // Redirect to user list
         } else {
             echo "Failed to delete user.";
+            
         }
     }
 }
