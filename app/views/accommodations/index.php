@@ -66,6 +66,9 @@
         .btn-exit {
             background-color: #e74c3c;
         }
+        h2 {
+            font-size: 2rem;
+        }
     </style>
 </head>
 <body>
