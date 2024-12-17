@@ -9,7 +9,7 @@ require_once 'app/controllers/ReservationController.php';
 $user_controller = new UserController();
 $accomondation_controller = new AccomondationController();
 $activities_controller = new ActivitiesController();
-//$reservation_controller = new ReservationController();
+$reservation_controller = new ReservationController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
