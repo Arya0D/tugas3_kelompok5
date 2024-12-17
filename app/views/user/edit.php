@@ -95,7 +95,7 @@
             <input type="text" id="nomor_telepon" name="nomor_telepon" value="<?php echo htmlspecialchars($user['nomor_telepon']); ?>" required>
 
             <div class="button-container">
-                <button type="reset" class="btn-reset">Reset</button>
+               
                 <button type="submit">Update</button>
             </div>
         </form>
