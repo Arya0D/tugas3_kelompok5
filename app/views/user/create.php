@@ -1,10 +1,9 @@
-<!-- app/views/accommodations/create.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Penginapan</title>
+    <title>Tambah Pengguna Baru</title>
     <style>
         * {
             margin: 0;
@@ -53,7 +52,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input, select {
+        input {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -79,34 +78,22 @@
     <!-- Section Kiri: Selamat Datang -->
     <div class="welcome-section">
         <h2>Selamat Datang</h2>
-        <p>Silahkan tambah data penginapan anda</p>
+        <p>Silahkan tambah data diri anda</p>
     </div>
 
-    <!-- Section Kanan: Form Tambah Penginapan -->
+    <!-- Section Kanan: Form Tambah Pengguna -->
     <div class="form-section">
         <div class="form-container">
-            <h2>Tambah Data Penginapan</h2>
-            <form action="/accommodations/store" method="POST">
-                <label for="nama_penginapan">Nama:</label>
-                <input type="text" name="nama_penginapan" id="nama_penginapan" required>
+            <h2>Tambah Pengguna Baru</h2>
+            <form action="/user/store" method="POST">
+                <label for="nama">Nama:</label>
+                <input type="text" name="nama" id="nama" required>
 
-                <label for="lokasi_penginapan">Lokasi:</label>
-                <input type="text" name="lokasi_penginapan" id="lokasi_penginapan" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
 
-                <label for="fasilitas">Fasilitas:</label>
-                <input type="text" name="fasilitas" id="fasilitas" required>
-
-                <label for="harga_penginapan">Harga:</label>
-                <input type="number" name="harga_penginapan" id="harga_penginapan" required>
-
-                <label for="id_aktivitas">Aktivitas:</label>
-                <select name="aktivitas" id="">
-                    <?php foreach ($activities as $x): ?>
-                        <option value="<?= htmlspecialchars($x['id_aktivitas']) ?>">
-                            <?= htmlspecialchars($x['nama_aktivitas']) ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
+                <label for="nomor_telepon">Nomor Telepon:</label>
+                <input type="number" name="nomor_telepon" id="nomor_telepon" required>
 
                 <button type="submit">Simpan</button>
             </form>

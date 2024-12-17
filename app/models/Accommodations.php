@@ -26,12 +26,12 @@ class Accommodations {
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function add($nama_penginapan, $lokasi, $fasilitas, $harga, $id_aktivitas) {
-        $query = $this->db->prepare("INSERT INTO accommodations (nama_penginapan, lokasi, fasilitas, harga, id_aktivitas) VALUES (:nama_penginapan, :lokasi, :fasilitas, :harga, :id_aktivitas)" );
+    public function add($nama_penginapan, $lokasi_penginapan, $fasilitas, $harga_penginapan, $id_aktivitas) {
+        $query = $this->db->prepare("INSERT INTO accommodations (nama_penginapan, lokasi_penginapan, fasilitas, harga_penginapan, id_aktivitas) VALUES (:nama_penginapan, :lokasi_penginapan, :fasilitas, :harga_penginapan, :id_aktivitas)" );
         $query->bindParam(':nama_penginapan', $nama_penginapan);
-        $query->bindParam(':lokasi', $lokasi);
+        $query->bindParam(':lokasi_penginapan', $lokasi_penginapan);
         $query->bindParam(':fasilitas', $fasilitas);
-        $query->bindParam(':harga', $harga);
+        $query->bindParam(':harga_penginapan', $harga_penginapan);
         $query->bindParam(':id_aktivitas', $id_aktivitas);
         
         return $query->execute();
@@ -39,12 +39,12 @@ class Accommodations {
 
     // Update Accommodation data by ID
     public function update($id, $data) {
-        $query = "UPDATE accommodations SET nama_penginapan = :nama_penginapan, lokasi = :lokasi, fasilitas = :fasilitas, harga = :harga, id_aktivitas = :id_aktivitas WHERE id_penginapan = :id_penginapan";
+        $query = "UPDATE accommodations SET nama_penginapan = :nama_penginapan, lokasi_penginapan = :lokasi_penginapan, fasilitas = :fasilitas, harga_penginapan = :harga_penginapan, id_aktivitas = :id_aktivitas WHERE id_penginapan = :id_penginapan";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':nama_penginapan', $data['nama_penginapan']);
-        $stmt->bindParam(':lokasi', $data['lokasi']);
+        $stmt->bindParam(':lokasi_penginapan', $data['lokasi_penginapan']);
         $stmt->bindParam(':fasilitas', $data['fasilitas']);
-        $stmt->bindParam(':harga', $data['harga']);
+        $stmt->bindParam(':harga_penginapan', $data['harga_penginapan']);
         $stmt->bindParam(':id_aktivitas', $data['aktivitas']);
         $stmt->bindParam(':id_penginapan', $id);
         return $stmt->execute();

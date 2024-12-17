@@ -1,11 +1,6 @@
 <?php
-// routes.php
-
-// require_once 'app/controllers/UserController.php';
 require_once 'app/controllers/AccommodationsController.php';
-// require_once 'app/controllers/ActivitiesController.php';
-// require_once 'app/controllers/ReservationController.php';
-
+// routes.php
 // $user_controller = new UserController();
 $accommondations_controller = new AccommodationsController();
 // $activities_controller = new ActivitiesController();

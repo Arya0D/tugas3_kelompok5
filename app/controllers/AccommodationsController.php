@@ -12,7 +12,6 @@ class AccommodationsController {
     public function index() {
         $accommodations = $this->accommodationsModel->getAllAccommodations();
         require_once '../app/views/accommodations/index.php';
-
     }
 
     public function create() {
@@ -22,11 +21,11 @@ class AccommodationsController {
 
     public function store() {
         $nama_penginapan = $_POST['nama_penginapan'];
-        $lokasi = $_POST['lokasi'];
+        $lokasi_penginapan = $_POST['lokasi_penginapan'];
         $fasilitas = $_POST['fasilitas'];
-        $harga = $_POST['harga'];
+        $harga_penginapan = $_POST['harga_penginapan'];
         $id_aktivitas = $_POST['aktivitas'];
-        $this->accommodationsModel->add($nama_penginapan, $lokasi, $fasilitas, $harga, $id_aktivitas);
+        $this->accommodationsModel->add($nama_penginapan, $lokasi_penginapan, $fasilitas, $harga_penginapan, $id_aktivitas);
         header('Location: /accommodations/index');
     }
     // Show the edit form with the accommodations data
