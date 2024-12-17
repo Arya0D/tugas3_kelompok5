@@ -101,7 +101,8 @@
 
                 <label for="id_aktivitas">Aktivitas:</label>
                 <select name="aktivitas" id="">
-                    <?php foreach ($activities as $x): ?>
+                <option value="">Pilih Aktivitas</option>    
+                <?php foreach ($activities as $x): ?>
                         <option value="<?= htmlspecialchars($x['id_aktivitas']) ?>">
                             <?= htmlspecialchars($x['nama_aktivitas']) ?>
                         </option>
