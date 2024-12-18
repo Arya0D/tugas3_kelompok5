@@ -94,7 +94,27 @@ Jika ingin berkontribusi pada proyek ini, silakan buat branch baru dan kirim pul
 ## Lisensi
 Proyek ini dilisensikan under MIT License.
 
-# Accommodations
+# PRAKTIKUM Web 2- POLITEKNIK NEGERI CILACAP
+## Sistem Reservasi Penginapan dan Aktivitas Pariwisata
+
+Sistem ini adalah web sederhana untuk mengelola data penginapan, termasuk fitur CRUD (Create, Read, Update, Delete) yang terintegrasi dengan aktivitas terkait. Aplikasi ini dibangun menggunakan PHP dengan pola MVC (Model-View-Controller).
+
+**Fitur :**
+- Menampilkan daftar user, activities, accomodations dan reservation.
+- Menambahkan daftar user, activities, accomodations dan reservation.
+- Mengedit data user, activities, accomodations dan reservation.
+- Menghapus data user, activities, accomodations dan reservation.
+- Merelasikan semua tabel user, activities, accomodations dan reservation.
+
+Dalam Sistem Reservasi Penginapan dan Aktivitas Pariwisata terdiri atas 4 tabel yang dibangun menggunakan metode MVC, yaitu :
+a. Table User
+b. Table Activities
+c. Table Accomodations
+d. Table Reservation
+
+----------------------------------------------------------------------------
+
+# Table Accommodations
 
 Model ini mengikuti arsitektur MVC (Model-View-Controller), dengan tugas utama berinteraksi dengan database menggunakan PDO (PHP Data Objects).
 
@@ -333,26 +353,5 @@ view pada accommodation berfungsi sebagai halaman yang dirancang untuk memfasili
 
 
 
-# PRAKTIKUM Web 2- POLITEKNIK NEGERI CILACAP
-## Sistem Reservasi Penginapan dan Aktivitas Pariwisata
 
-Sistem ini adalah web sederhana untuk mengelola data penginapan, termasuk fitur CRUD (Create, Read, Update, Delete) yang terintegrasi dengan aktivitas terkait. Aplikasi ini dibangun menggunakan PHP dengan pola MVC (Model-View-Controller).
-
-**Fitur :**
-- Menampilkan daftar user, activities, accomodations dan reservation.
-- Menambahkan daftar user, activities, accomodations dan reservation.
-- Mengedit data user, activities, accomodations dan reservation.
-- Menghapus data user, activities, accomodations dan reservation.
-- Merelasikan semua tabel user, activities, accomodations dan reservation.
-
-Dalam Sistem Reservasi Penginapan dan Aktivitas Pariwisata terdiri atas 4 tabel yang dibangun menggunakan metode MVC, yaitu :
-a. Table User
-b. Table Activities
-c. Table Accomodations
-d. Table Reservation
-
-----------------------------------------------------------------------------
-### a. Table User
-<br>
-1. Model
 
