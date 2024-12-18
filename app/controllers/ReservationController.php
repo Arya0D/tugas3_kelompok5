@@ -12,7 +12,7 @@ class ReservationController {
     public function index() {
         $reservation = $this->reservationModel->getAllReservation();
         $user = $this->reservationModel->getAlluser();
-        require_once '../app/views/reservation/index.php';
+        require_once '../app/views/reservation/reservation.php';
 
     }
 
