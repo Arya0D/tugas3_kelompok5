@@ -186,7 +186,16 @@ public function delete($id) {
 Fungsi : Menghapus data pengguna dari tabel users berdasarkan ID.
 
 ## - Views
-### a. create.php
+Views pada user ini memiliki 3 tampilan yaitu untuk create.php, edit.php dan index.php, sesuai dengan fungsi dari View dalam MVC yaitu untuk memberikan tampilan pada sistem untuk dapat berinteraksi dengan pengguna.
+<br>
+a. create.php
+Fungsi : Digunakan untuk menampilkan form pembuatan data baru (menambahkan pengguna).
+
+b. edit.php
+Fungsi : Digunakan untuk menampilkan form pengeditan data pengguna yang sudah ada.
+
+c. index.php
+Fungsi : Digunakan untuk menampilkan daftar semua data pengguna.
 
 ## Tech Stack
 - **Bahasa Pemrograman:** PHP
