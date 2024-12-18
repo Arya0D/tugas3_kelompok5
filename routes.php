@@ -3,14 +3,14 @@
 
 require_once 'app/controllers/UserController.php';
 require_once 'app/controllers/AccommodationsController.php';
-// require_once 'app/controllers/ActivitiesController.php';
+require_once 'app/controllers/ActivitiesController.php';
 require_once 'app/controllers/ReservationController.php';
 require_once 'app/controllers/Controllers.php';
 
 
 $user_controller = new UserController();
 $accommodations_controller = new AccommodationsController();
-// $activities_controller = new ActivitiesController();
+$activities_controller = new ActivitiesController();
 $reservation_controller = new ReservationController();
 $controller = new Controller();
 
@@ -32,7 +32,7 @@ if ($url == '/user/index') { //users
 } elseif (preg_match('/\/user\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $user_controller->delete($id);
-// } elseif($url == '/activites/index'){ //activites
+} elseif($url == '/activities/index'){//activites
     $activities_controller->index();
 }  elseif ($url == '/activities/create' && $requestMethod == 'GET') {
     $activities_controller->create();
@@ -47,7 +47,7 @@ if ($url == '/user/index') { //users
 } elseif (preg_match('/\/activities\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $activities_controller->delete($id);
-} elseif($url == '/accommodations/index'){ //accommodations
+} elseif($url == '/accommodations/index'){//accommodations
     $accommodations_controller->index();
 }  elseif ($url == '/accommodations/create' && $requestMethod == 'GET') {
     $accommodations_controller->create();
@@ -62,7 +62,7 @@ if ($url == '/user/index') { //users
 } elseif (preg_match('/\/accommodations\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $accommodations_controller->delete($id);
-} elseif($url == '/reservation/index'){ //reservation
+} elseif($url == '/reservation/index'){//reservation
     $reservation_controller->index();
 }  elseif ($url == '/reservation/create' && $requestMethod == 'GET') {
     $reservation_controller->create();
@@ -79,7 +79,7 @@ if ($url == '/user/index') { //users
 } elseif (preg_match('/\/resrvation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
     $reseervation_controller->delete($id);
-}elseif($url == '/'){ //accommodations
+}elseif($url == '/'){//accommodations
     $controller->index();
 } else {
     http_response_code(404);
