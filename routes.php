@@ -78,7 +78,6 @@ if ($url == '/user/index') { //users
     $reseervation_controller->update($id, $_POST);
 } elseif (preg_match('/\/resrvation\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id = $matches[1];
-    $reservation_controller->delete($id);
     $reseervation_controller->delete($id);
 }elseif($url == '/'){ //accommodations
     $controller->index();
