@@ -1,130 +1,40 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            display: flex;
-            height: 100vh;
-            background-color: #f8f9fa;
-        }
-
-        /* Bagian Kiri */
-        .left-section {
-            background-color: #57a8ff;
-            color: black;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-top-right-radius: 200px;
-            border-bottom-right-radius: 200px;
-            padding: 20px;
-        }
-
-        .left-section h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .left-section p {
-            font-size: 1.1rem;
-        }
-
-        /* Bagian Kanan */
-        .right-section {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
-            flex-direction: column;
-        }
-
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            margin-bottom: 30px;
-        }
-
-        .form-container h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .form-container label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .form-container input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            margin-top: 5px;
-            font-size: 1rem;
-        }
-
-        .form-container button {
-            margin-top: 20px;
-            background-color: #57a8ff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0px 2px 5px #ccc;
-        }
-
-        .form-container button:hover {
-            background-color: #4993e0;
-        }
-    </style>
-</head>
-<body>
-    <!-- Bagian Kiri -->
-    <div class="left-section">
-        <h1>Selamat Datang</h1>
-        <p>Silahkan tambah data pengguna atau aktivitas anda</p>
+<div class="h-screen bg-blue-200 py-10 px-28 flex">
+    <!-- Section Kiri: Selamat Datang -->
+    <div class="w-1/2 text-white">
+        <h1 class="text-6xl font-bold uppercase">tambah data <span class="text-sky-500">aktivitas</span></h1>
+        <div class="relative">
+        <img src="/images/activitie.png" alt="" class="absolute top-6 right-[calc(50%-30px)] translate-x-1/4 w-[350px]">
+        </div>
     </div>
 
-
-
-        <!-- Form Tambah Aktivitas -->
+    <!-- Section Kanan: Form Tambah Pengguna -->
+    <div class="bg-white w-1/2 rounded-[24px] ">
         <div class="form-container">
-            <h2>Tambah Aktivitas</h2>
-            <form action="/activities/store" method="POST">
-                <label for="nama_aktivitas">Nama Aktivitas</label>
-                <input type="text" id="nama_aktivitas" name="nama_aktivitas" placeholder="Masukkan nama aktivitas" required>
+        <form action="/activities/store" method="POST" class="p-28 flex flex-col gap-4 h-full">
+            <div class="flex flex-col">
+            <label for="nama_aktivitas">Aktivitas</label>
+                <input type="text" id="nama_aktivitas" name="nama_aktivitas" class="border-2 border-black rounded-xl p-1 " required>
 
+            </div>
+                <div class="flex flex-col">
                 <label for="deskripsi">Deskripsi</label>
-                <input type="text" id="deskripsi" name="deskripsi" placeholder="Masukkan deskripsi" required>
+                <input type="text" id="deskripsi" name="deskripsi" class="border-2 border-black rounded-xl p-1 " required>
 
-                <label for="lokasi_aktivitas">Lokasi</label>
-                <input type="text" id="lokasi_aktivitas" name="lokasi_aktivitas" placeholder="Masukkan lokasi" required>
+                </div>
+               <div class="flex flex-col">
+               <label for="lokasi_aktivitas">Lokasi</label>
+                <input type="text" id="lokasi_aktivitas" name="lokasi_aktivitas" class="border-2 border-black rounded-xl p-1 " required>
 
-                <label for="harga">Harga</label>
-                <input type="number" id="harga" name="harga" placeholder="Masukkan harga" required>
+               </div>
+               <div class="flex flex-col">
+               <label for="harga">Harga</label>
+                <input type="number" id="harga" name="harga_aktivitas" class="border-2 border-black rounded-xl p-1 " required>
 
-                <button type="submit">Simpan</button>
+               </div>
+               
+                <button type="submit" class="mt-10 w-[200px] bg-blue-600 p-4 rounded-xl text-white mx-auto">Simpan</button>
             </form>
         </div>
     </div>
-</body>
-</html>
+    </div>
+

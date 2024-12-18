@@ -1,7 +1,7 @@
-<h2>Daftar Pengguna</h2>
-<a href="/reservation/create">Tambah Pengguna Baru</a>
-
-<table id="table" class="display">
+<div class="p-3" >
+        <h2 class="text-black uppercase text-center text-6xl font-bold p-4">Table Users</h2>
+        <table id="table" class="display">
+        <a href="/reservation/create" class="bg-sky-700 p-3 relative top-[30px] rounded-md text-white font-bold z-10"><button class="btn btn-add">Tambah</button></a>
     <thead>
         <tr>
             <th>Pelanggan</th>
@@ -17,12 +17,16 @@
             <td><?= htmlspecialchars($x['nama']) ?></td>
             <td><?= htmlspecialchars($x['nama_penginapan']) ?></td>
             <td><?= htmlspecialchars($x['tanggal_reservasi']) ?></td>
-            <td><?= htmlspecialchars($x['status_pembayaran']) ?></td>
-            <td>
-                <a href="/reservation/edit/<?= $x['id_reservasi'] ?>">Edit</a> |
-                <a href="/reservation/delete/<?= $x['id_reservasi'] ?>" onclick="return confirm('Are you sure?')">Delete</a>
-            </td>
+            <td class="<?= ($x['status_pembayaran'])?"text-green-700":"text-red-700";?>"><?= ($x['status_pembayaran'])?"Sudah Dibayar":"Belum di bayar";?></td>
+            <td class="text-white flex items-center justify-between gap-2">
+                            <a href="/reservation/edit/<?php echo $x['id_reservasi']; ?>" class="w-full h-8 bg-sky-700 p-1 flex items-center justify-center rounded-xl"><i class="ri-pencil-fill"></i></a>
+                            <a href="/reservation/delete/<?php echo $x['id_reservasi']; ?>" class="w-full h-8 bg-red-700 p-1 flex items-center justify-center rounded-xl" onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-fill"></i></a>
+                        </td>
         </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+        <div style="text-align: right;">
+    </div>
+
+
