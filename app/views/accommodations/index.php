@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Pengguna</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+
         .container {
             width: 950px;
             background-color: #6c6c6c;
@@ -74,7 +66,7 @@
 <body>
     <div class="container">
         <h2 style="text-align: center; color: white;">Daftar Pengguna</h2>
-        <table>
+        <table id="table">
             <thead>
                 <tr>
                     <th>Nama Penginapan</th>
