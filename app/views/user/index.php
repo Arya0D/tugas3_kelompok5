@@ -66,7 +66,7 @@
     
     <div class="container">
         <h2 style="text-align: center; color: white;">Table Users</h2>
-        <table id="table">
+        <table>
             <thead>
                 <tr>
                     <th>Nama</th>
