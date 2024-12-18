@@ -1,25 +1,63 @@
-<div class="flex flex-col justify-center items-center h-screen bg-[url('/images/background.png')] bg-cover">
-    <div class="bg-slate-400/80 text-center w-1/2 text-xl font-bold p-6 rounded-xl">
-        <h1 class="text-3xl">Selamat Datang</h1>
-        <h3>Admin</h3>
-    </div>
-    <div class="grid max-md:grid-cols-1 max-md:grid-rows-1 grid-cols-2 grid-rows-2">
-        <a href="/user/index" class="w-8 h-8 p-4 w-full h-full">
-            <img src="/images/user.png" alt="" class="w-[150px] h-[150px]">
-            <h1 class="text-center font-bold text-white text-xl">User</h1>
-        </a>
-        <a href="/reservation/index" class="w-8 h-8 p-4 w-full h-full">
-            <img src="/images/reservation.png" alt="" class="w-[150px] h-[150px]">
-            <h1 class="text-center font-bold text-white text-xl">Reservation</h1>
-        </a>
-        <a href="/activites/index" class="w-8 h-8 p-4 w-full h-full">
-            <img src="/images/activities.png" alt="" class="w-[150px] h-[150px]">
-            <h1 class="text-center font-bold text-white text-xl">Activities</h1>
-        </a>
-        <a href="/accommodations/index" class="w-8 h-8 p-4 w-full h-full">
-            <img src="/images/accommodations.png" alt="" class="w-[150px] h-[150px]">
-            <h1 class="text-center font-bold text-white text-xl">Accommodations</h1>
-        </a>
-        
-    </div>
+<div class="flex h-full">
+
+<div class="flex-1 p-4 h-full">
+    <div class="flex gap-3 justify-center flex-wrap mb-10">
+        <div class="flex  bg-slate-300 p-3 flex-1 rounded-md">
+            <img src="/images/user.png" alt="" width="100">
+            <div class="m-auto text-center font-bold uppercase">
+            <h1 class="text-2xl">Pelanggan</h1>
+            <div><?= $this->model->getTableRow("users")?></div>
+            </div>
+            
+        </div>
+        <div class="flex  bg-slate-300 p-3 flex-1 rounded-md">
+            <img src="/images/reservation.png" alt="" width="100">
+            <div class="m-auto font-bold uppercase">
+            <h1 class="text-2xl">Reservasi</h1>
+            <div class="text-right"><?= $this->model->getTableRow("reservations")?></div>
+            </div>
+            
+        </div>
+        <div class="flex  bg-slate-300 p-3 flex-1 rounded-md">
+            <img src="/images/accommodations.png" alt="" width="100">
+            <div class="m-auto text-center font-bold uppercase">
+            <h1 class="text-2xl">Akomodasi</h1>
+            <div><?= $this->model->getTableRow("accommodations")?></div>
+            </div>
+            
+        </div>
+        <div class="flex  bg-slate-300 p-3 flex-1 rounded-md">
+            <img src="/images/activitie.png" alt="" width="100">
+            <div class="m-auto text-center font-bold uppercase">
+            <h1 class="text-2xl">aktivitas</h1>
+            <div><?= $this->model->getTableRow("activities")?></div>
+            </div>
+            
+        </div>
+     
+</div>
+<div>
+    <h1 class="text-xl font-bold mb-2 uppercase">Reservasi Minggu ini</h1>
+   <table class="display w-full rounded-xl" id="table">
+    <thead>
+    <tr class="text-center">
+        <th>Nama pelanggan</th>
+        <th>Penginapan</th>
+        <th>Tanggal Reservasi</th>
+    </tr>
+    </thead>
+   <tbody>
+   <?php foreach($reservation as $x): ?>
+    <tr>
+       
+            <td><?=$x["nama"]?></td>
+            <td><?=$x["nama_penginapan"]?></td>
+            <td><?=$x["tanggal_reservasi"]?></td>
+            
+    </tr>
+    <?php endforeach; ?>
+   </tbody>
+   
+   </table>
+</div>
 </div>
