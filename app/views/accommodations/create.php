@@ -1,7 +1,7 @@
 <div class="h-screen bg-blue-200 py-10 px-28 flex">
     <!-- Section Kiri: Selamat Datang -->
     <div class="w-1/2 text-white">
-        <h1 class="text-6xl font-bold uppercase">tambah data <span class="text-sky-500">aktivitas</span></h1>
+        <h1 class="text-6xl font-bold uppercase">tambah data <span class="text-sky-500">Akomodasi</span></h1>
         <div class="relative">
         <img src="/images/accommodations.png" alt="" class="absolute top-6 right-[calc(50%-30px)] translate-x-1/4 w-[350px]">
         </div>

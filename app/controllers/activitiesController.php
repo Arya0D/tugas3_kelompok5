@@ -3,7 +3,7 @@
 require_once '../app/models/activities.php';
 
 class ActivitiesController {
-    private $userModel;
+    private $activitiesModel;
 
     public function __construct() {
         $this->activitiesModel = new Activities();

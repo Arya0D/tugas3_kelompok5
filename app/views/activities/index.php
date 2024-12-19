@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <?php foreach ($activities as $a): ?>
-                    <tr class="even:text-white">
+                    <tr>
                         <td><?= htmlspecialchars($a['nama_aktivitas']) ?></td>
                         <td><?= htmlspecialchars($a['deskripsi']) ?></td>
                         <td><?= htmlspecialchars($a['lokasi_aktivitas']) ?></td>
