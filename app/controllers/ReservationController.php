@@ -36,7 +36,7 @@ class ReservationController {
     }
     // Show the edit form with the user data
     public function edit($id) {
-        $user = $this->reservationModel->find($id); // Assume find() gets user by ID
+        $reservation = $this->reservationModel->find($id); // Assume find() gets user by ID
         $accommadation = $this->reservationModel->getAllAccommodations();
         $user = $this->reservationModel->getAlluser();
         require_once __DIR__ . '/../views/reservation/edit.php';

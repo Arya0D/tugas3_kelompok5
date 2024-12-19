@@ -12,7 +12,7 @@
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
-                    <tr class="even:text-white">
+                    <tr>
                         <td><?= htmlspecialchars($user['nama']) ?></td>
                         <td><?= htmlspecialchars($user['email']) ?></td>
                         <td><?= htmlspecialchars($user['nomor_telepon']) ?></td>
