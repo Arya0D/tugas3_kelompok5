@@ -24,15 +24,36 @@
     <div class="w-full bg-black text-white p-2 text-center rounded-3xl">Kelompok 5</div>
 <div class="mt-10 flex">
     <ul class="mx-auto flex flex-col gap-4">
-    <a href="/" class="text-5xl"><i class="ri-home-2-fill"></i></a>
+
+    <div class="flex flex-col">
+    <a href="/" class="text-5xl m-auto"><i class="ri-home-2-fill" a></i></a>
+    <h1 class="uppercase text-center font-bold text-[15px]">home</h1>
+    </div>
+  
+    <div class="flex flex-col">
+    <a  href="/user/index" class="text-5xl m-auto"><i class="ri-user-fill"></i></a>
+    <h1 class="uppercase text-center font-bold text-[15px]">Pelanggan</h1>
+    </div>
+
+    <div class="flex flex-col">
+    <a href="/activities/index" class="text-5xl m-auto"><i class="ri-run-line"></i></a>
+    <h1 class="uppercase text-center font-bold text-[15px]">Aktivitas</h1>
+    </div>
+
+    <div class="flex flex-col flex">
+    <a href="/reservation/index" class="text-5xl m-auto"><i class="ri-git-repository-fill"></i></a>
+    <h1 class="uppercase text-center font-bold text-[15px]">Reservasi</h1>
+    </div>
     
-        <a  href="/user/index" class="text-5xl"><i class="ri-user-fill"></i></a>
+    <div class="flex flex-col flex">
+    <a href="/accommodations/index" class="text-5xl m-auto"><i class="ri-hotel-bed-fill"></i></a>
+    <h1 class="uppercase text-center font-bold text-[15px]">Akomodasi</h1>
+    </div>
     
-        <a href="/activities/index" class="text-5xl"><i class="ri-run-line"></i></a>
+        
    
-        <a href="/reservation/index" class="text-5xl"><i class="ri-git-repository-fill"></i></a>
-   
-        <a href="/accommodations/index" class="text-5xl"><i class="ri-hotel-bed-fill"></i></a>
+      
+       
     </ul>
 </div>
     </div>
