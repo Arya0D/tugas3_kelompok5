@@ -97,26 +97,19 @@ Proyek ini dilisensikan under MIT License.
 # PRAKTIKUM Web 2- POLITEKNIK NEGERI CILACAP
 ## Sistem Reservasi Penginapan dan Aktivitas Pariwisata
 
-Sistem ini adalah web sederhana untuk mengelola data penginapan, termasuk fitur CRUD (Create, Read, Update, Delete) yang terintegrasi dengan aktivitas terkait. Aplikasi ini dibangun menggunakan PHP dengan pola MVC (Model-View-Controller).
+Sistem ini adalah web sederhana untuk mengelola data penginapan, termasuk fitur CRUD (Create, Read, Update, Delete) yang terintegrasi dengan aktivitas terkait. Web ini dibangun menggunakan PHP dengan pola MVC (Model-View-Controller).
 
 **Fitur :**
-- Menampilkan daftar user, activities, accomodations dan reservation.
-- Menambahkan daftar user, activities, accomodations dan reservation.
-- Mengedit data user, activities, accomodations dan reservation.
-- Menghapus data user, activities, accomodations dan reservation.
-- Merelasikan semua tabel user, activities, accomodations dan reservation.
-
-Dalam Sistem Reservasi Penginapan dan Aktivitas Pariwisata terdiri atas 4 tabel yang dibangun menggunakan metode MVC, yaitu :
-a. Table User
-b. Table Activities
-c. Table Accomodations
-d. Table Reservation
-
+- Menampilkan daftar penginapan.
+- Menambahkan daftar penginapan baru.
+- Mengedit data penginapan.
+- Menghapus data penginapan.
+- Menghubungkan penginapan dengan aktivitas terkait.
 ----------------------------------------------------------------------------
 
-# Table Accommodations
+# Accommodations
 
-Model ini mengikuti arsitektur MVC (Model-View-Controller), dengan tugas utama berinteraksi dengan database menggunakan PDO (PHP Data Objects).
+Model ini mengikuti arsitektur MVC (Model-View-Controller).
 
 ## - MODEL
 Model ini menyediakan fungsi-fungsi untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada tabel accommodations di database, serta hubungan dengan tabel activities.
