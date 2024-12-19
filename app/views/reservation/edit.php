@@ -14,7 +14,7 @@
         <form action="/reservation/update/<?=$reservation['id_reservasi'] ?>" method="POST" class="p-12 flex flex-col gap-4 h-full">
     <label for="">Tanggal:</label>
     <div class="flex flex-col">
-    <input type="date" name="tanggal" id="tanggal" class="border-2 border-black rounded-xl p-1 " required>
+    <input type="date" name="tanggal" id="tanggal" class="border-2 border-black rounded-xl p-1 " value="<?=$reservation['tanggal_reservasi']?>" required>
     </div>
     <div class="flex flex-col">
     <label for="">Status:</label>
