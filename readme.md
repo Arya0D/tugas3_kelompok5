@@ -109,7 +109,7 @@ Sistem ini adalah web sederhana untuk mengelola data penginapan, termasuk fitur 
 
 # Accommodations
 
-Model ini mengikuti arsitektur MVC (Model-View-Controller).
+Model ini mengikuti arsitektur MVC (Model-View-Controller)
 
 ## - MODEL
 Model ini menyediakan fungsi-fungsi untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada tabel accommodations di database, serta hubungan dengan tabel activities.
